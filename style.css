@@ -26,7 +26,9 @@ a:hover {
     color: #25E6C8;
 }
 
-
+.bg-wite {
+    background: white ;    
+ }
 
 
 .bg-dark {
@@ -184,18 +186,21 @@ a:hover {
 .content-box .content p {
     font-size: 0.9rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+ .mancase{
+ width: 25% ;
+ padding: 10 1rem;
+ margin: 10 auto;
+}
+#mancase .container-man {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+}
+#mancase .container-man img {
+     height: 300px; 
+     margin-top: 1rem; 
+    float :right ;
+} 
 
 
 
@@ -226,6 +231,8 @@ a:hover {
     .container {
         max-width: 960px;
     }
+
+    
 }
 
 @media (min-width: 1200px) {
