@@ -198,8 +198,14 @@ a:hover {
      background-color: white;
       position: relative; 
 
+    }
+    .section-1.content-man {
+        display:flex;
 
     }
+    
+   
+
 /* #mancase .container-man { 
     display: grid;
     grid-template-columns: 1fr 1fr;
