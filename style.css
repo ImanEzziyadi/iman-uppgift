@@ -196,11 +196,20 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
 }
-#mancase .container-man img {
-     height: 300px; 
-     margin-top: 1rem; 
-    float :right ;
-} 
+/* #mancase .container-man img { */
+     /* height: 300px;  */
+     /* margin-top: 1rem;  */
+    /* float :right ; */
+ /* }  */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2BAAEC;
+    color: white;
+    text-align: center;
+}
 
 
 
@@ -225,6 +234,8 @@ a:hover {
     .container {
         max-width: 720px;
     }
+
+
 }
 
 @media (min-width: 992px) {
@@ -239,6 +250,8 @@ a:hover {
     .container {
         max-width: 1140px;
     }
+    
+
 }
 
 
