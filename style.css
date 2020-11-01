@@ -186,16 +186,25 @@ a:hover {
 .content-box .content p {
     font-size: 0.9rem;
 }
- .mancase{
- width: 25% ;
- padding: 10 1rem;
- margin: 10 auto;
-}
-#mancase .container-man {
+ /* .mancase{ */
+ /* width: 25% ; */
+ /* padding: 10 1rem; */
+ /* margin: 10 auto; */
+
+/* } */
+ .section-1 {
+     width: 50%;
+     height: 1000;
+     background-color: white;
+      position: relative; 
+
+
+    }
+/* #mancase .container-man { 
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
-}
+}*/
 /* #mancase .container-man img { */
      /* height: 300px;  */
      /* margin-top: 1rem;  */
