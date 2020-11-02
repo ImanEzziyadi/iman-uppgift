@@ -192,16 +192,27 @@ a:hover {
  /* margin: 10 auto; */
 
 /* } */
- .section-1 {
-     width: 50%;
-     height: 300;
-     background-color: white;
+.section-1 {
+     width: 1000px;
+     height: 600px;
+     background-color: yellow ;
       position: relative; 
+    }
+
+.section-1 .container-man {
+     width: 900px;
+     height: 400px;
+     margin: 240px auto;
+     background:red;
+        /* align-content: center; */
+        /* display: flex; */
 
     }
-    .section-1.container-man {
-        display:flex;
-
+.selection-1 .container-man .content-box  {
+   
+        align-self: center;
+        color: #363636;
+        font-weight: 30;
     }
     
    
