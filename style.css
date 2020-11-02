@@ -194,12 +194,12 @@ a:hover {
 /* } */
  .section-1 {
      width: 50%;
-     height: 1000;
+     height: 300;
      background-color: white;
       position: relative; 
 
     }
-    .section-1.content-man {
+    .section-1.container-man {
         display:flex;
 
     }
