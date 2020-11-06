@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+@import url(colors.css);
+
 * {
     box-sizing: border-box;
-}
+ } 
 
 html, body {
     font-weight: 400;
@@ -13,6 +16,30 @@ html, body {
     align-items: center;
     /* justify-content: center; */
     /* display: flex; */
+}
+.grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-areas:    "header header header"
+                                "showcase about services"
+                                "appointment appointment appointment"
+                                "footer footer footer";
+    }  
+header {
+     grid-area: header;
+
+     display: grid;
+     grid-template-columns: 1fr; 
+     grid-template-areas:    "navbar-top"
+                            "navbar";                          
+}
+#navbar-top  {
+    grid-area: navbar-top ;
+    text-align: center;
+}
+#navbar {
+ grid-area: navbar;
+ text-align: center;
 }
 
 .border {
@@ -28,7 +55,7 @@ a {
 a:hover {
     color: #25E6C8;
 }
-.bg-blue {
+/* .bg-blue { 
     background-color: #2BAAEC;
 }
 
@@ -53,9 +80,6 @@ a:hover {
     background: white ;  
 }  
 
-/* .bg-wite { 
-    background: white ;    
- }
 
 
 /* .bg-dark { 
@@ -68,8 +92,6 @@ a:hover {
     color: #333333; 
 }
 
-/* .bg-gray {
-    background: #DEDEDE; 
 }*/
 
 .btn {
@@ -94,43 +116,37 @@ a:hover {
     cursor: pointer;
     background-color: #2BAAEC;
 }
-
-
-
-
-
-.collapse:not(.show) {
+ .collapse:not(.show) { 
     display: none;
 }
-
-.container {
+ /* .container {  
     width: 100%;
     padding: 0 1rem;
     margin: 0 auto;
-}
+}*/
 
-.navbar-top {
+#navbar-top {
     border-bottom: 1px solid #707070;
 
 }
 
-.navbar, .navbar-top {
+#navbar-top, #navbar  {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
 }
 
-.navbar .container, .navbar-top .container {
-    display: flex;
+#navbar .container, .navbar-top .container {
+     display: flex; 
     justify-content: space-between;  
     align-items: center;
 }
 
-.navbar-top .container {
+ #navbar-top .container { 
     font-size: 0.8rem;
 }
 
-.navbar-top .container .hours {
+#navbar-top .container .hours {
     color:#626262;
 }
 
@@ -140,51 +156,53 @@ a:hover {
     font-size: 1.2em;
 }
 
-.navbar-top .container .socialmedia a {
+#navbar-top .container .socialmedia a {
     margin: 0 0.5rem;
 }
 
-.navbar {
+#navbar {
     margin: 1.2rem 0;
 }
 
 
-.navbar-brand {
+#navbar-brand {
     display: inline-block;
     font-size: 1.5rem;
     color: black;
     margin-right: 1rem;  
 }
 
-.navbar-brand img {
+#navbar-brand img {
     height: 4rem;
     margin-top: 0.5rem;
 }
 
-.navbar-toggler {
+#navbar-toggler {
     font-size: 2.5rem;
     color:#2BAAEC;
     background-color: transparent;
     border: 1px solid transparent;
 }
 
-.navbar-collapse {
+#navbar-collapse {
     align-items: center;
 }
 
-.navbar-nav {
+#navbar-nav {
     display: flex;
     flex-direction: column;
 }
 
-.nav-link {
+#navbar .container .collaps navbar-collapse .nav-link  {
     color: #363636;
     font-size: 1rem;
     font-family: 'Roboto Slab', serif;
     padding: 0;
     text-decoration: none;
 }
-
+#showcase {
+    grid-area: showcase ;
+}
 
 #showcase .container {
     display: grid;
@@ -223,11 +241,7 @@ a:hover {
 }
 /* service */
  #services { 
-     /* grid-area: services; */
-     /* display: flex; */
-     /* *text-align: center;  */
-     /* *justify-content: center;  */
-     /* align-items: center;  */
+        grid-area: showcase ;
      border: 1px  solid black;
     }
 
@@ -265,7 +279,10 @@ a:hover {
 
 
 
-
+#aboutuse {
+    grid-area: aboutuse ;
+    text-align: center;
+}
 #aboutus .container-man {
      width: 900px;
      height: 400px;
@@ -292,10 +309,6 @@ a:hover {
     
 /* update */
     /* mobile first */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
-@import url(colors.css);
-
 .d-flex {
     display: flex;
 }
@@ -305,22 +318,40 @@ a:hover {
 }
 
 #appointment {
+    grid-area: appointment  ;
     font-family: 'Roboto', sans-serif;
 }
-
-.overlay {
+#appointment .overlay {
     opacity: 80%;
 }
+#appointment .overlay .container {
+    max-width: 1120px;
+    padding: 0 1rem ;
+    margin: 0 auto;
+}
 
-.center-content {
-    display: block;
+
+
+
+#appointment .overlay .container .centet-flex {
+    display:block;
+   justify-content: space-between;
+    padding: 1.5rem 0 1.5rem 0;
+    align-items: center;
+}
+#appointment .container .centet-flex .p {
+    margin: 0;
     text-align: center;
-    padding: 1.5rem 0;
+    grid-area: text;
+}
+#appointment .overlay .container .centet-flex .button {
+    grid-area: button ;
 }
 
 footer {
+    grid-area: footer ;
+    text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    
     font-family: 'Roboto', sans-serif;
 } 
 
@@ -355,31 +386,37 @@ footer {
         display: flex;
     }
 
-    .container {
+    #appointment .overlay .container { 
         max-width: 720px;
     }
  
-    .center-content {
+    #appointment .container .centet-flex {
        display:flex;
        justify-content: space-between;
-       padding: 2rem 0;
+      align-items: center;
+    }
+    #appointment .container .centet-flex .p {
+        text-align: left;
     }
    
-   .grid { 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    } 
+   /* .grid {  */
+        /* display: grid; */
+        /* grid-template-columns: repeat(3, 1fr); */
+    /* }  */
 }
 
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1440px;
-    }
-    .grid { 
+@media (min-width: 1400px) {
+    .grid {
         display: grid;
+    
         grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:    "header header header"
+                                "showcase about services"
+                                "appointment appointment appointment"
+                                "footer footer footer";
+    }  
 }
-
+    
 
 
 
