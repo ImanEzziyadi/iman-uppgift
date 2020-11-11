@@ -19,7 +19,7 @@ html, body {
      grid-template-columns: 1fr;
      grid-template-areas:    "header"
                              "showcase" 
-                             "about" 
+                             "aboutus" 
                              "services"
                              "appointment "
                              "footer";
@@ -212,30 +212,33 @@ collapse:not(.show) {
 
  #aboutus {
     grid-area: aboutus ;
-    text-align: center;
+    /* text-align: center; */
 }
 #aboutus .container-man {
-     width: 900px;
+     /* width: 300px; */
      height: 400px;
-     margin: 300px auto;
-     display: block; 
+     /* margin: 300px auto; */
+     /* display: block;  */
      text-align: center;
      background: yellowgreen;
-     align-content: center; 
+     /* align-content: center;  */
      /* display: flex; */
+     margin: 0;
   
 }
 
 
 #aboutus .container-man .content-box {
-    /* position:relatve; */
-    /* padding: 20px 20px  20px; */
+     /* position:relatve;  */
+     /* padding: 20px 20px  20px;  */
+     height: 259px;
+     width: 400px;
      text-align: center; 
-    align-items: center;
+    /* align-items: center; */
     background-color: yellow;
     word-wrap: break-word;
     /* justify-content: center; */
-     /* display: flex;  */
+      display: flex;  
     
 }
     
@@ -285,13 +288,17 @@ cursor: pointer;
     z-index: 1;
     opacity: 0.4;
 }
-.text1{
+.text1 {
     font-family: 'Times New Roman', Times, serif;
      size:4em; 
-     color: black;
+     color:black;
      word-wrap: break-word;
     /* border: 1px solid black; */
 }
+#services .container .box  p {
+    color: black;
+}
+
 
 
 #appointment {
