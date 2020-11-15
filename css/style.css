@@ -89,11 +89,19 @@ a:hover {
     font-size: 1.2em;
     padding: 0.15;
 }
+#navbar-top .container .socialmedia {
+    /* float: right; */
+    position: relative;
+    display: flex;
+
+}
+
 
 #navbar-top .container .socialmedia a {
     margin-right: 2rem; 
     list-style: none;
     font-size: 1.3e;
+    float: right;
 }
 
 #navbar {
@@ -248,15 +256,15 @@ collapse:not(.show) {
 
 
 #aboutus .container-man .content-box {
-     /* position:relatve;  */
+      position:relatve;  
      /* padding: 20px 20px  20px;  */
-     height: 200px;
-     width: 70%;
-     align-self:  center; 
+     /* height: 200px; */
+     /* width: 70%; */
+     /* align-self:  center;  */
      align-items: center; 
     background-color: yellow;
     word-wrap: break-word;
-    /* justify-content: center; */
+     justify-content: center; 
       display:block;
       font-size: small;
     
@@ -269,11 +277,11 @@ collapse:not(.show) {
     grid-area: services ;
     /* border: 1px  solid black; */
 }
-.text  { 
+/* .text  { 
     font-family: Arial, Helvetica, sans-serif;
-    size: 16px;
-    text-align: center;
-}
+    font-size: small;
+    text-align: center; */
+/* } */
 
 /* } */
 #services .container {
@@ -296,8 +304,12 @@ collapse:not(.show) {
     overflow: hidden;
     /* border-radius: 20px; */
     line-height: 1;
-    width: 600;
-    height: 600;
+     widows: 150px;
+    height: 150px;
+/* display: block; */
+/* justify-content: center;  */
+
+    
     
 }
 #services .container .box:hover {
@@ -371,6 +383,15 @@ footer {
     background-color: #2BAAEC;
     color: white;
     text-align: center;
+
+
+
+    /* uppdate 
+    @media (min-width: 480px) {
+    .div-class {
+      color: orange;
+    }
+}
 }*/
 @media (min-width: 768px) {
     .nav-link {
@@ -391,13 +412,17 @@ footer {
     }
     #navbar-top .container {
         display:flex;
-        /* justify-content: space-between;   */
+         justify-content: space-between;   
         /* align-items: center; */
         font-size: 0.8rem;
         padding:  0 1rem ;
         width: 100%;
         margin:0 ;
     }
+    #navbar-top .container .socialmedia{
+    padding-left:55rem;
+    }
+
     a {
         color: #2BAAEC;
         text-decoration: none;
@@ -453,7 +478,7 @@ footer {
     }
     #aboutus .container-man{
         left: 50%;
-        margin:auto ;
+        /* margin:auto ; */
         position: relative;
      margin: 0;
     }
