@@ -6,13 +6,8 @@
  } 
 
 html, body {
-    /* font-weight: 400; */
-    /* font-family: 'Roboto', sans-serif; */
-    /* line-height: 1.5; */
-    /* font-size: 16px; */
     margin: 0;
      padding: 0; 
-    /* color: #626262; */
 }
 .grid {
      display: grid;
@@ -71,13 +66,13 @@ a:hover {
     border-bottom: 1px solid #707070;
 } 
  #navbar-top .container {
-    display: block;
+    /* display: block; */
     /* justify-content: space-between;   */
     /* align-items: center; */
     font-size: 0.8rem;
     padding:  0 1rem ;
     width: 100%;
-    margin:0 ;
+    margin:0 auto ;
 }
 
 #navbar-top .container .hours {
@@ -98,19 +93,18 @@ a:hover {
 
 
 #navbar-top .container .socialmedia a {
-    margin-right: 2rem; 
+     margin-right: 2rem; 
+     margin-top: 5px;
     list-style: none;
     font-size: 1.3e;
     float: right;
 }
 
-#navbar {
-     
+#navbar {  
      display: grid; 
       justify-content: space-between; 
-      padding: 00.5rem 1rem;
-      position: sticky;
-     opacity: 1;
+      padding: 0.5rem 1rem;
+      margin: 1.2rem 0;
 }
 #navbar-brand {
     display: inline-block;
@@ -121,9 +115,7 @@ a:hover {
 #navbar .container {
     display: flex; 
    justify-content: space-between;  
-   /* align-items: center; */
    font-size: 0.8rem;
-   /* padding:  0 1rem ; */
    width: 100%;
    margin: 0;
    margin-left: 2rem;
@@ -145,16 +137,16 @@ collapse:not(.show) {
 
 .navbar-collapse {
     align-items: center;
-    display: flex; 
-   margin: 0;  
+    /* display: flex;  */
+   /* margin: 0;   */
 }
 
 #navbar-nav {
     display: flex;
     flex-direction: column;
 }
-
-#navbar .container .navbar-collapse .nav-link  {
+/* .navbar-collapse */
+#navbar .container  .nav-link  {
     color: #363636;
     font-size: 1rem;
     font-family: 'Roboto Slab', serif;
@@ -392,7 +384,7 @@ footer {
       color: orange;
     }
 }
-}*/
+/* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
     .nav-link {
         padding-right: 0.5rem;
@@ -400,7 +392,9 @@ footer {
     }
     
     .navbar-nav {
-        flex-direction: row;
+        display: flex;
+        /* flex-direction: row; */
+        
     }
 
     .navbar-toggler {
@@ -409,19 +403,44 @@ footer {
     
     .collapse:not(.show) {
         display: flex;
+        margin-right: 5rem;
     }
-    #navbar-top .container {
+    /* #navbar-top .container { 
         display:flex;
          justify-content: space-between;   
-        /* align-items: center; */
+        align-items: center; 
         font-size: 0.8rem;
         padding:  0 1rem ;
         width: 100%;
         margin:0 ;
-    }
+        background-color: gray;
+    }*/
     #navbar-top .container .socialmedia{
-    padding-left:55rem;
+    padding-left: 35rem;
     }
+    #navbar-top .container .socialmedia a {
+        margin-right: 1.5rem; 
+        margin-top: 5px;
+       list-style: none;
+       font-size: 2e;
+       float: right;
+   }
+   .navbar-collapse {
+    align-items: center;
+     display: flex;
+    float: right;
+   }
+   #navbar-top .container .hours {
+    color:#626262;
+   }
+   #navbar-top .container .hours i {
+    color: #2BAAEC;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+    padding: 0.15;
+   
+   } 
+ 
 
     a {
         color: #2BAAEC;
@@ -490,34 +509,72 @@ footer {
         /* grid-template-columns: repeat(3, 1fr); */
     /* }  */
     
-}
-
-
-
-
-
-
-
-
-
- /* @media (max-width: 1400px) {  
-    .grid {
-        display: grid; 
-        grid-template-columns: 1fr ;
-       grid-template-areas:      "header " 
-                                 "showcase"
-                                 "about "
-                                 "services"
-                                "appointment"
-                                "footer;
-    }  
-}
-    
+}    
 #services .container {   
     display: grid;
     grid-template-columns:  1fr;
      grid-template-rows:  1fr;
- } */
+ } 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992pxpx) 
+{ 
+    #navbar-top .container .socialmedia a {
+        margin-right: 15px; 
+        margin-top: 5px;
+       list-style: none;
+       font-size: 2e;
+       float: right;
+       
+     }
+     
+     .navbar-collapse {
+        align-items: center;
+         display: flex;
+        float: right
+    }
+    #navbar-top .container .hours {
+        color:#626262;
+    }
+    #navbar-top .container .hours i {
+        color: #2BAAEC;
+        margin-right: 0.5rem;
+        font-size: 1.2em;
+        padding: 0.15;
+    }
+}
+  
+/* header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr ; 
+  grid-template-areas:    "navbar-top"
+                         "navbar";                                        
+                      
+     /* .grid {  */
+        /* display: grid; */
+        /* grid-template-columns: repeat(3, 1fr); */
+    /* }  */                     
+ 
+                                  
+                            
+
+ /* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...}  */
 
 
 
