@@ -101,18 +101,17 @@ a:hover {
     /* float: right; */
     position: relative;
     display: flex;
-    background-color:orange
 
 }
 
 
 #navbar-top .container .socialmedia a {
-     /* margin-right: 2rem;  */
-     /* margin-top: 5px; */
-    /* list-style: none; */
-    /* font-size: 1.3e; */
-    /* float: right; */
-    margin: 0.05rem;
+      margin-right: 2rem;  
+      margin-top: 5px; 
+     list-style: none; 
+    font-size: 1.3e; 
+     float: right; 
+      margin: 0.05rem;
 }
 
 #navbar {  
@@ -179,6 +178,7 @@ collapse:not(.show) {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 4rem;
+    width: 100%;
 }
 
 #showcase .container img {
@@ -231,23 +231,23 @@ collapse:not(.show) {
  #aboutus {
     grid-area: aboutus ;
     
-    /* text-align: center; */
+     text-align: center; 
    
-       grid-template-columns:  1fr 1fr ;
+       grid-template-columns:  1fr ifr;
         /* grid-template-rows:  1fr; */
     gap: 20px;
     padding: 10px;
 }
 
 #aboutus .container-man {
-    grid-template-columns:  1fr;
-        grid-template-rows:  1fr;
-         display: grid;  
-    width: 100%;
+    grid-template-columns:  1fr 1fr;
+        grid-template-rows:  3fr;
+        
+      width: 500px; 
      height: 400px;
-      margin: auto; 
-   
-     text-align: center;
+      margin: 0; 
+     /* display: block;  */
+     /* text-align: center; */
      
     
 }
@@ -259,7 +259,6 @@ collapse:not(.show) {
      /* width: 70%; */
      /* align-self:  center;  */
      align-items: center; 
-    background-color: yellow;
     word-wrap: break-word;
      justify-content: center; 
       display:block;
@@ -269,32 +268,48 @@ collapse:not(.show) {
     
 #services { 
     grid-area: services ;
-
+    
  } 
 #services .container {
-      max-width: 500px; 
-      height: 400 ; 
-        margin: auto;   
-     display: grid;
-        grid-template-columns:  1fr;
-         grid-template-rows:  1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);; 
+      grid-template-rows:  1fr 1fr 1fr; 
      gap: 20px;
+    
+     max-width: 450px; 
+     height: 400 ; 
+    position: relative;
+    margin:0;
+    grid-template-columns: 2fr; 
+    grid-template-rows: 3fr;  
+    
      padding: 10px;
-     
-     /* box-sizing: border-box; */
+     align-items: center;
+}
+.text-center
+ {
+    font-family: 'Times New Roman', Times, serif;
+     size:6em; 
+     color:black;
+     word-wrap: break-word;
+     margin:auto;
+    /* border: 1px solid black; */
 }
 #services .container .box {
     position: relative;
+    justify-content: center; 
+    margin: 0;
+
     background: white;
     /* padding: 20px 30px 30px; */
     text-align: center;
     overflow: hidden;
     /* border-radius: 20px; */
     line-height: 1;
-     widows: 150px;
+     width: 150px;
     height: 150px;
-/* display: block; */
-/* justify-content: center;  */
+ display: block; 
+ justify-content: center; 
 
     
     
@@ -383,7 +398,6 @@ footer {
     .collapse:not(.show) {
         display: flex;
         margin-right:5rem;
-        background-color: gray;
     }
     
     #navbar-top .container .socialmedia {
@@ -454,31 +468,25 @@ footer {
     }
     #aboutus {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        
-    padding: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows:  1fr; */
+        /* column-gap:2rem; */
+      
+  
+    padding: 15px;
     }
-    .border-man {
-        border: 1px solid #2BAAEC;
-        width: 220px;
-    }
-      #aboutus .container-man {
-            grid-template-columns:  1fr ifr;
-                grid-template-rows:  1fr;
-                 display: grid;  
-            width: 100%;
-             height: 400px;
-              margin: auto; 
-           
-             text-align: center;
-             
+    #aboutus .container-man {
+        grid-template-columns:  1fr 1fr;
+            grid-template-rows:  1fr;
+            column-gap: 1rem;
             
+         height: 500px;
+         text-align: center;
+         position: relative;
+         justify-content: center;
+         width: 700px;
+         margin:auto;
     }
-        
-        
-        
-        
-   
     
     #aboutus .container-man .content-box {
           position:relatve;  
@@ -487,17 +495,13 @@ footer {
          /* width: 70%; */
          /* align-self:  center;  */
          align-items: center; 
-        background-color: yellow;
         word-wrap: break-word;
          justify-content: space-between; 
           display:block;
           font-size: medium;
-          width: 500;
-          height: 400px;
+          width: auto;
         
     }
-
-
    
    /* .grid {  */
         /* display: grid; */
@@ -507,14 +511,16 @@ footer {
 }    
 #services .container {   
     display: grid;
-    grid-template-columns:  1fr;
-     grid-template-rows:  1fr;
+    grid-template-columns: repeat(3, 1fr);;
+     grid-template-rows:  1fr 1fr ;
+     max-width: 600px; 
+     height: 400 ; 
  } 
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) 
-{ 
+ { 
     #navbar-top .container .socialmedia a {
         margin-right: 15px; 
         margin-top: 5px;
@@ -522,21 +528,18 @@ footer {
        font-size: 3e;
        float: right;
        
-     }
+    }
      #navbar-top .container .socialmedia{
         padding-left: 51rem;
-       
-            }
+      }
      
      .navbar-collapse {
         align-items: center;
          display: flex;
         float: right;
-        background-color: yellow;
     }
     #navbar-top  .container .hours {
         color:#626262;
-        background-color:red;
         margin: 0 ;
     }
     #navbar-top .container .hours i {
@@ -547,15 +550,35 @@ footer {
        
        
     }
+    #aboutus .container-man {
+        grid-template-columns:  1fr 1f;
+            grid-template-rows:  1fr;
+            column-gap: 1rem;
+            
+         height: 500px;
+         text-align: center;
+         position: relative;
+         justify-content: center;
+         width: 900px;
+         margin:auto;
+    }
     
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
  @media only screen and (min-width: 1200px) {
-    #navbar-top .container .socialmedia{
+     #navbar-top .container .socialmedia{
         padding-left: 77rem;
         margin:auto;
        
-            }
+     }
+     #services .container {   
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);;
+         grid-template-rows:  1fr 1fr ;
+         max-width: 800px; 
+         height: 400 ; 
+     } 
+
   
 } 
   
